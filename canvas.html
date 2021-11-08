@@ -6,6 +6,8 @@
 
     <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
     <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
     <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" type="text/css"/>
     <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css"/>
 </head>
@@ -14,7 +16,9 @@
     <span>Input Data</span>
     <button id="compile">COMPILE</button>
     <button id="run">RUN</button>
-    <button id="resetLotColor">RESET COLOR</button>
+    <button id="resetLotColor">LOT COLOR</button>
+    <button id="resetPPIDColor">PPID COLOR</button>
+    <button id="resetSchedPriColor">Sched PRI COLOR</button>
 </div>
 <table id="spreadsheet">
     <thead>
@@ -22,6 +26,8 @@
         <td id='EQP' style="width: 100px">EQP</td>
         <td id='CHAMBER' style="width: 100px">CHAMBER</td>
         <td id='LOT' style="width: 100px">LOT</td>
+        <td id='PPID' style="width: 100px">PPID</td>
+        <td id='SCHEDPRI' style="width: 100px">SCHEDPRI</td>
         <td id='SCHED_START_TIME' style="width: 200px">SCHED_START_TIME</td>
         <td id='SCHED_END_TIME' style="width: 200px">SCHED_END_TIME</td>
     </tr>
@@ -31,6 +37,8 @@
         <td>AAAA01</td>
         <td>AAAA01-1</td>
         <td>A</td>
+        <td>AAA</td>
+        <td>0run</td>
         <td>20211106 021015</td>
         <td>20211106 075629</td>
     </tr>
@@ -53,6 +61,5 @@
         document.getElementById("jsonData").value = JSON.stringify(runSheet.getJson());
     }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="js/IOparser.js"></script>
 </html>
